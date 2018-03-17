@@ -50,7 +50,7 @@ var (
 	AppRoot    string // e.g. "/app1"
 	BasePath   string // e.g. "$GOPATH/src/corp/sample"
 	AppPath    string // e.g. "$GOPATH/src/corp/sample/app"
-	ViewsPath  string // e.g. "$GOPATH/src/corp/sample/app/views"
+	ViewsPath  string // e.g. "$GOPATH/src/corp/sample/app/resources/views"
 	ImportPath string // e.g. "corp/sample"
 	SourcePath string // e.g. "$GOPATH/src"
 
@@ -131,7 +131,7 @@ func Init(mode, importPath, srcPath string) {
 	RevelPath = filepath.Join(revelSourcePath, filepath.FromSlash(RevelImportPath))
 	BasePath = filepath.Join(SourcePath, filepath.FromSlash(importPath))
 	AppPath = filepath.Join(BasePath, "app")
-	ViewsPath = filepath.Join(AppPath, "views")
+	ViewsPath = filepath.Join(AppPath, "resources/views")
 
 	CodePaths = []string{AppPath}
 
